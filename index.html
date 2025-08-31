@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker with Charts & Graphs</title>
+  <link rel="stylesheet" href="Tracker.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <form id="expense-form">
+      <input type="text" id="item" placeholder="Item name" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <input type="date" id="date" required>
+      <select id="category">
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <h2>All Expenses</h2>
+    <ul id="expense-list"></ul>
+
+    <h2>Yearly Expenses Breakdown</h2>
+    <div id="yearly-breakdown"></div>
+
+    <h2>Charts Summary</h2>
+    <div id="charts-summary">
+      <div class="chart-box">
+        <h3>Monthly Expenses (Current Year)</h3>
+        <canvas id="monthlyPieChart" height="200"></canvas>
+        <canvas id="monthlyBarChart" height="200"></canvas>
+        <canvas id="monthlyLineChart" height="200"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Yearly Expenses (All Years)</h3>
+        <canvas id="yearlyPieChart" height="200"></canvas>
+        <canvas id="yearlyBarChart" height="200"></canvas>
+        <canvas id="yearlyLineChart" height="200"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Category-wise Expenses</h3>
+        <canvas id="categoryPieChart" height="200"></canvas>
+        <canvas id="categoryBarChart" height="200"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="Tracker.js"></script>
+</body>
+</html>
